@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>111</title>
+   <style>
+        .c1{
+            width:150px;
+            height:604px;
+            border:7px solid #D8BFD8;
+        }
+        .c2{
+            color:pink;
+            font-size:20px;
+            font-weight:400;
+            text-align:center;
+            background:green;
+             cursor:pointer;
+        }
+        .c3{
+            display:block;
+            padding:7px 10px;
+            border:1px dotted gray;
+
+        }
+        .hide{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="c1">
+        <div class="item">
+            <div class="c2" onclick="clickMe(this);">00</div>
+            <div class="c3 hide">
+                <a class="c3">111</a>
+                <a class="c3">222</a>
+                <a class="c3">333</a>
+            </div>
+    </div>
+    <div class="c2" onclick="clickMe(this);">11</div>
+    <div class="c3">
+        <a class="c3">111</a>
+        <a class="c3">222</a>
+        <a class="c3">333</a>
+    </div>
+    <div class="c2" onclick="clickMe(this);">22</div>
+    <div class="c3">
+        <a class="c3">111</a>
+        <a class="c3">222</a>
+        <a class="c3">333</a>
+    </div>
+    <div class="c2" onclick="clickMe(this)">33</div>
+    <div class="c3">
+        <a class="c3">111</a>
+        <a class="c3">222</a>
+        <a class="c3">333</a>
+</div>
+</div>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        function clickMe(self){
+            var hasHide=$(self).next().hasClass("hide");
+            if (hasHide){
+                $(self).next().removeClass("hide");
+            }else{
+                $(self).next().addClass("hide");
+            }
+        }
+
+
+    </script>
+</body>
+</html>
